@@ -1,0 +1,8 @@
+[user]
+	name = midnightSuyama
+	email = midnightSuyama@gmail.com
+[core]
+	editor = emacs
+	excludesfile = ~/.gitignore
+[color]
+	ui = auto
