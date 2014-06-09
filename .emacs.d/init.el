@@ -49,6 +49,11 @@
 ;;(global-auto-complete-mode t)
 ;;(setq ac-auto-start t)
 
+;; speedbar
+;;(require 'sr-speedbar)
+;;(setq speedbar-show-unknown-files t)
+;;(setq sr-speedbar-right-side nil)
+
 ;; cc-mode
 ;;(require 'cc-mode)
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
