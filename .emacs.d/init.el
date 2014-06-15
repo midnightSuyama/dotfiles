@@ -53,6 +53,7 @@
 ;;(require 'sr-speedbar)
 ;;(setq speedbar-show-unknown-files t)
 ;;(setq sr-speedbar-right-side nil)
+;;(sr-speedbar-refresh-turn-off)
 
 ;; cc-mode
 ;;(require 'cc-mode)
