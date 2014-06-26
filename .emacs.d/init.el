@@ -43,11 +43,14 @@
 ;;(auto-install-update-emacswiki-package-name t)
 ;;(auto-install-compatibility-setup)
 
+;; yasnippet
+;;(require 'yasnippet)
+;;(yas-global-mode t)
+
 ;; auto-complete
-;;(require 'auto-complete)
 ;;(require 'auto-complete-config)
-;;(global-auto-complete-mode t)
-;;(setq ac-auto-start t)
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
+;;(ac-config-default)
 
 ;; speedbar
 ;;(require 'sr-speedbar)
