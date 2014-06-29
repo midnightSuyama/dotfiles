@@ -37,11 +37,10 @@
 ;; load-path
 ;;(add-to-list 'load-path "~/.emacs.d/elisp")
 
-;; auto-install
-;;(require 'auto-install)
-;;(setq auto-install-directory "~/.emacs.d/elisp/")
-;;(auto-install-update-emacswiki-package-name t)
-;;(auto-install-compatibility-setup)
+;; package
+;;(require 'package)
+;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;;(package-initialize)
 
 ;; yasnippet
 ;;(require 'yasnippet)
@@ -49,8 +48,14 @@
 
 ;; auto-complete
 ;;(require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/elisp/ac-dict")
+;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 ;;(ac-config-default)
+
+;; flycheck
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; magit
+;;(require 'magit)
 
 ;; speedbar
 ;;(require 'sr-speedbar)
@@ -58,21 +63,37 @@
 ;;(setq sr-speedbar-right-side nil)
 ;;(sr-speedbar-refresh-turn-off)
 
+;; rinari
+;;(require 'rinari)
+
 ;; cc-mode
 ;;(require 'cc-mode)
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
 
 ;; php-mode
-;;(require 'php-mode)
-;;(setq php-mode-force-pear t)
+;;(autoload 'php-mode "php-mode")
 ;;(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 
 ;; ruby-mode
 ;;(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 ;;(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
+;;(add-hook 'ruby-mode-hook '(lambda () (rinari-launch)))
+
+;; rhtml-mode
+;;(require 'rhtml-mode)
+;;(add-hook 'rhtml-mode '(lambda () (rinari-launch)))
+
+;; scss-mode
+;;(autoload 'scss-mode "scss-mode")
+;;(add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+
+;; coffee-mode
+;;(autoload 'coffee-mode "coffee-mode")
+;;(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+;;(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
 
 ;; markdown-mode
-;;(autoload 'markdown-mode "markdown-mode" "Major mode for editing Markdown files" t)
-;;(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-;;(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+;;(autoload 'markdown-mode "markdown-mode")
+;;(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+;;(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))

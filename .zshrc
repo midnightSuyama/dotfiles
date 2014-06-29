@@ -48,6 +48,7 @@ esac
 alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -al'
+#alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs -nw'
 
 # Function
 function chpwd() { ls }
