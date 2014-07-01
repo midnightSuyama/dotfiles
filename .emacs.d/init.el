@@ -42,58 +42,78 @@
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 ;;(package-initialize)
 
+;; cask
+(require 'cask "~/.cask/cask.el")
+(cask-initialize)
+
 ;; yasnippet
-;;(require 'yasnippet)
-;;(yas-global-mode t)
+(require 'yasnippet)
+(yas-global-mode t)
 
 ;; auto-complete
-;;(require 'auto-complete-config)
-;;(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-;;(ac-config-default)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;; flycheck
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; magit
-;;(require 'magit)
+(require 'magit)
 
 ;; speedbar
-;;(require 'sr-speedbar)
-;;(setq speedbar-show-unknown-files t)
-;;(setq sr-speedbar-right-side nil)
-;;(sr-speedbar-refresh-turn-off)
+(require 'sr-speedbar)
+(setq speedbar-show-unknown-files t)
+(setq sr-speedbar-right-side nil)
+(sr-speedbar-refresh-turn-off)
 
-;; rinari
-;;(require 'rinari)
-
-;; cc-mode
-;;(require 'cc-mode)
-;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
+;; c-mode
+(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
 
 ;; php-mode
-;;(autoload 'php-mode "php-mode")
-;;(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(autoload 'php-mode "php-mode")
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+
+;; rinari
+(require 'rinari)
 
 ;; ruby-mode
-;;(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
-;;(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
-;;(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
-;;(add-hook 'ruby-mode-hook '(lambda () (rinari-launch)))
+(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
+(add-hook 'ruby-mode-hook '(lambda () (rinari-launch)))
+
+;; ruby-electric
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+
+;; ruby-block
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
 
 ;; rhtml-mode
-;;(require 'rhtml-mode)
-;;(add-hook 'rhtml-mode '(lambda () (rinari-launch)))
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook '(lambda () (rinari-launch)))
 
 ;; scss-mode
-;;(autoload 'scss-mode "scss-mode")
-;;(add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+(autoload 'scss-mode "scss-mode")
+(add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+(setq scss-compile-at-save nil)
+
+;; js-mode
+(setq js-indent-level 2)
 
 ;; coffee-mode
-;;(autoload 'coffee-mode "coffee-mode")
-;;(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-;;(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+(autoload 'coffee-mode "coffee-mode")
+(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
+(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
+(add-hook 'coffee-mode-hook '(lambda () (setq coffee-tab-width 2)))
+
+;; yaml-mode
+(autoload 'yaml-mode "yaml-mode")
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ;; markdown-mode
-;;(autoload 'markdown-mode "markdown-mode")
-;;(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
-;;(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(autoload 'markdown-mode "markdown-mode")
+(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
