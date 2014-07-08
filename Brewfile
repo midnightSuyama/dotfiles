@@ -8,6 +8,7 @@ install docker
 install ffmpeg
 install gist
 install git
+install grep
 install groonga
 install hadoop
 install hive
@@ -52,7 +53,7 @@ install openni
 install sensor
 install sensor-kinect
 
-tap 'phinze/cask'
+tap 'caskroom/cask'
 install brew-cask
 
 cask install adobe-reader

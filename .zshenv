@@ -1,6 +1,9 @@
 # Homebrew
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Cask
+PATH=$PATH:$HOME/.cask/bin
+
 # RVM
 PATH=$PATH:$HOME/.rvm/bin
 

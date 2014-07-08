@@ -54,6 +54,13 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
+;; helm
+(require 'helm-config)
+(helm-mode t)
+(setq helm-delete-minibuffer-contents-from-point t)
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+
 ;; flycheck
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
@@ -65,6 +72,10 @@
 (setq speedbar-show-unknown-files t)
 (setq sr-speedbar-right-side nil)
 (sr-speedbar-refresh-turn-off)
+
+;; anzu
+(require 'anzu)
+(global-anzu-mode t)
 
 ;; c-mode
 (add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
@@ -88,20 +99,22 @@
 
 ;; ruby-block
 (require 'ruby-block)
-(ruby-block-mode t)
-(setq ruby-block-highlight-toggle t)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-block-mode t) (setq ruby-block-highlight-toggle t)))
 
 ;; rhtml-mode
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook '(lambda () (rinari-launch)))
 
+;; css-mode
+(add-hook 'css-mode-hook '(lambda () (setq css-indent-offset 2)))
+
 ;; scss-mode
 (autoload 'scss-mode "scss-mode")
 (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
-(setq scss-compile-at-save nil)
+(add-hook 'scss-mode-hook '(lambda () (setq scss-compile-at-save nil)))
 
 ;; js-mode
-(setq js-indent-level 2)
+(add-hook 'js-mode-hook '(lambda () (setq js-indent-level 2)))
 
 ;; coffee-mode
 (autoload 'coffee-mode "coffee-mode")
