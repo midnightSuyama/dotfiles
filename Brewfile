@@ -5,6 +5,7 @@ install boost
 install cmake
 install curl
 install docker
+install doxygen
 install ffmpeg
 install gist
 install git
