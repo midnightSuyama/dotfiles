@@ -82,6 +82,7 @@ cask install menumeters
 cask install mou
 cask install mplayerx
 cask install quicksilver
+cask install sequel-pro
 cask install testflight
 cask install titanium-studio
 cask install vagrant
