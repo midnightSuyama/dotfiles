@@ -55,3 +55,6 @@ alias lla='ls -al'
 
 # Function
 function chpwd() { ls }
+
+# gitignore.io
+function gi() { curl http://www.gitignore.io/api/$@ ;}

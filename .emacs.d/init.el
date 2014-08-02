@@ -31,6 +31,7 @@
 (cond ((featurep 'ns)
        (setq ns-command-modifier (quote meta))
        (setq ns-alternate-modifier (quote super))
+       (define-key global-map [?¥] [?\\])
        (tool-bar-mode -1)
 ))
 
