@@ -76,6 +76,7 @@ cask install grandperspective
 cask install handbrake
 cask install imagealpha
 cask install imageoptim
+cask install injection
 cask install java
 cask install jd-gui
 cask install menumeters
