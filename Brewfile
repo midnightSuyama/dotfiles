@@ -13,6 +13,7 @@ install grep
 install groonga
 install hadoop
 install hive
+install hping
 install imagemagick
 install jenkins
 install jq
