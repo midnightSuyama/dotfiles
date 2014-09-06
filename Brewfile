@@ -23,6 +23,7 @@ install lua
 install markdown
 install mecab
 install memcached
+install mitmproxy
 install mogenerator
 install mongodb
 install monit
