@@ -17,6 +17,7 @@ install hping
 install imagemagick
 install jenkins
 install jq
+install jsonpp
 install kestrel
 install kyoto-tycoon
 install lua
@@ -72,7 +73,6 @@ cask install firefox
 cask install flash-player
 cask install ganttproject
 cask install github
-cask install gitx
 cask install google-chrome
 cask install grandperspective
 cask install handbrake
@@ -86,8 +86,11 @@ cask install mou
 cask install mplayerx
 cask install quicksilver
 cask install sequel-pro
+cask install sourcetree
 cask install testflight
 cask install titanium-studio
+cask install unity-web-player
+cask install unity3d
 cask install vagrant
 cask install virtualbox
 cask install zeroxed
