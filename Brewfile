@@ -1,3 +1,4 @@
+install ansible
 install apktool
 install autoconf
 install automake
