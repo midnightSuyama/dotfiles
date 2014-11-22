@@ -89,6 +89,8 @@ cask install quicksilver
 cask install sequel-pro
 cask install sourcetree
 cask install testflight
+cask install texturepacker
+cask install tiled
 cask install titanium-studio
 cask install unity-web-player
 cask install unity3d
