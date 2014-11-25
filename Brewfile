@@ -82,6 +82,7 @@ cask install imageoptim
 cask install injection
 cask install java
 cask install jd-gui
+cask install leap-motion
 cask install menumeters
 cask install mou
 cask install mplayerx
