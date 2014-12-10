@@ -4,6 +4,7 @@ install autoconf
 install automake
 install boost
 install cmake
+install cloog
 install curl
 install docker
 install doxygen
