@@ -41,6 +41,7 @@ install phantomjs
 install postgresql
 install qt
 install readline
+install reattach-to-user-namespace
 install redis
 install rename
 install sqlite
