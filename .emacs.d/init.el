@@ -27,6 +27,13 @@
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 
+;; Windmove
+(global-set-key (kbd "C-c <left>")  'windmove-left)
+(global-set-key (kbd "C-c <right>") 'windmove-right)
+(global-set-key (kbd "C-c <up>")    'windmove-up)
+(global-set-key (kbd "C-c <down>")  'windmove-down)
+(global-set-key (kbd "C-x p") '(lambda () (interactive) (other-window -1)))
+
 ;; Cocoa Emacs
 (cond ((featurep 'ns)
        (setq ns-command-modifier (quote meta))
