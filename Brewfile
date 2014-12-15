@@ -63,6 +63,7 @@ install sensor-kinect
 tap 'caskroom/cask'
 install brew-cask
 
+cask install 0xed
 cask install adobe-reader
 cask install android-studio
 cask install appcleaner
@@ -99,4 +100,3 @@ cask install unity-web-player
 cask install unity3d
 cask install vagrant
 cask install virtualbox
-cask install zeroxed
