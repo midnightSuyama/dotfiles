@@ -38,6 +38,7 @@ install nvm
 install opencv
 install openssl
 install phantomjs
+install pidcat
 install postgresql
 install qt
 install readline
