@@ -92,6 +92,11 @@
 (autoload 'php-mode "php-mode")
 (add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 
+;; emmet-mode
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'css-mode-hook 'emmet-mode)
+
 ;; rinari
 (require 'rinari)
 

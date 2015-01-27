@@ -11,6 +11,7 @@
 (depends-on "anzu")
 (depends-on "sr-speedbar")
 (depends-on "php-mode")
+(depends-on "emmet-mode")
 (depends-on "rinari")
 (depends-on "ruby-mode")
 (depends-on "ruby-electric")
