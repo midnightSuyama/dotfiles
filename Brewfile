@@ -78,6 +78,7 @@ cask install emacs
 cask install firefox
 cask install flash-player
 cask install ganttproject
+cask install gitbook
 cask install github
 cask install google-chrome
 cask install grandperspective
