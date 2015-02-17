@@ -71,6 +71,7 @@ cask install appcleaner
 cask install arduino
 cask install atom
 cask install audacity
+cask install calibre
 cask install dropbox
 cask install eclipse-ide
 cask install emacs
@@ -90,6 +91,7 @@ cask install leap-motion
 cask install menumeters
 cask install mou
 cask install mplayerx
+cask install qlstephen
 cask install quicksilver
 cask install sequel-pro
 cask install sourcetree
