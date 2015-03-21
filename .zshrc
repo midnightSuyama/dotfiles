@@ -36,6 +36,9 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 setopt auto_cd
 setopt auto_pushd
 
+autoload -U chpwd_recent_dirs cdr add-zsh-hook
+add-zsh-hook chpwd chpwd_recent_dirs
+
 # Beep
 setopt nobeep
 
