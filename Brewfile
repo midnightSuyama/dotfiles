@@ -62,6 +62,9 @@ install openni
 install sensor
 install sensor-kinect
 
+tap 'peco/peco'
+install peco
+
 tap 'caskroom/cask'
 install brew-cask
 

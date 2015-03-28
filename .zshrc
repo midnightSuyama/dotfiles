@@ -35,6 +35,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 # Change directory
 setopt auto_cd
 setopt auto_pushd
+setopt hist_ignore_all_dups
 
 autoload -U chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
@@ -59,5 +60,23 @@ alias lla='ls -al'
 # Function
 function chpwd() { ls }
 
-# gitignore.io
+#function peco-select-history() {
+#    BUFFER=$(\history -n 1 | tail -r | peco --query "$LBUFFER")
+#    CURSOR=$#BUFFER
+#    zle clear-screen
+#}
+#zle -N peco-select-history
+#bindkey '^r' peco-select-history
+
+#function peco-cdr() {
+#    local selected_dir=$(cdr -l | awk '{ print $2 }' | peco)
+#    if [ -n "$selected_dir" ]; then
+#        BUFFER="cd ${selected_dir}"
+#        zle accept-line
+#    fi
+#    zle clear-screen
+#}
+#zle -N peco-cdr
+#bindkey '^@' peco-cdr
+
 function gi() { curl http://www.gitignore.io/api/$@ ;}
