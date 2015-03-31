@@ -81,6 +81,7 @@ cask install eclipse-ide
 cask install emacs
 cask install firefox
 cask install flash-player
+cask install fritzing
 cask install ganttproject
 cask install gitbook
 cask install github
