@@ -54,6 +54,10 @@
 ;;(require 'cask "~/.cask/cask.el")
 ;;(cask-initialize)
 
+;; exec-path-from-shell
+;;(when (memq window-system '(mac ns))
+;;    (exec-path-from-shell-initialize))
+
 ;; yasnippet
 ;;(require 'yasnippet)
 ;;(yas-global-mode t)
@@ -61,25 +65,43 @@
 ;; auto-complete
 ;;(require 'auto-complete-config)
 ;;(ac-config-default)
+;;(setq ac-use-menu-map t)
+;;(define-key ac-menu-map (kbd "C-n") 'ac-next)
+;;(define-key ac-menu-map (kbd "C-p") 'ac-previous)
 
 ;; helm
 ;;(require 'helm-config)
 ;;(helm-mode t)
-;;(setq helm-delete-minibuffer-contents-from-point t)
-;;(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+;;(define-key global-map (kbd "M-x")     'helm-M-x)
+;;(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+;;(define-key global-map (kbd "C-x C-r") 'helm-recentf)
+;;(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
+;;(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
+;;(define-key global-map (kbd "C-c i")   'helm-imenu)
 ;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+;;(define-key helm-read-file-map  (kbd "TAB") 'helm-execute-persistent-action)
+;;(setq helm-delete-minibuffer-contents-from-point t)
+
+;; popwin
+;;(require 'popwin)
+;;(popwin-mode t)
 
 ;; flycheck
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; magit
-;(require 'magit)
+;;(require 'magit)
+;;(setq magit-last-seen-setup-instructions "1.4.0")
 
-;; speedbar
+;; sr-speedbar
 ;;(require 'sr-speedbar)
 ;;(setq speedbar-show-unknown-files t)
 ;;(setq sr-speedbar-right-side nil)
 ;;(sr-speedbar-refresh-turn-off)
+
+;; dash-at-point
+;;(global-set-key (kbd "C-c d") 'dash-at-point)
+;;(global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
 
 ;; anzu
 ;;(require 'anzu)
@@ -88,23 +110,43 @@
 ;; c-mode
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
 
+;; c++-mode
+(add-to-list 'auto-mode-alist '("\\.ino$" . c++-mode))
+
+;; csharp-mode
+;;(require 'csharp-mode)
+;;(add-hook 'csharp-mode-hook '(lambda () (omnisharp-mode) (flycheck-mode)))
+
+;; omnisharp
+;;(require 'omnisharp)
+;;(setq omnisharp-server-executable-path "/opt/OmniSharpServer/OmniSharp/bin/Debug/OmniSharp.exe")
+;;(define-key omnisharp-mode-map (kbd "<C-tab>") 'omnisharp-auto-complete)
+;;(define-key omnisharp-mode-map "." 'omnisharp-add-dot-and-auto-complete)
+
 ;; php-mode
-;;(autoload 'php-mode "php-mode")
-;;(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+;;(require 'php-mode)
 
 ;; emmet-mode
 ;;(require 'emmet-mode)
 ;;(add-hook 'sgml-mode-hook 'emmet-mode)
 ;;(add-hook 'css-mode-hook 'emmet-mode)
 
-;; rinari
-;;(require 'rinari)
+;; rvm
+;;(require 'rvm)
+;;(rvm-use-default)
 
 ;; ruby-mode
 ;;(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 ;;(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
-;;(add-hook 'ruby-mode-hook '(lambda () (rinari-launch)))
+
+;; robe
+;;(add-hook 'ruby-mode-hook 'robe-mode)
+;;(add-hook 'robe-mode-hook 'ac-robe-setup)
+
+;; rinari
+;;(require 'rinari)
+;;(add-hook 'ruby-mode-hook 'rinari-launch)
 
 ;; ruby-electric
 ;;(require 'ruby-electric)
@@ -116,7 +158,7 @@
 
 ;; rhtml-mode
 ;;(require 'rhtml-mode)
-;;(add-hook 'rhtml-mode-hook '(lambda () (rinari-launch)))
+;;(add-hook 'rhtml-mode-hook 'rinari-launch)
 
 ;; css-mode
 ;;(add-hook 'css-mode-hook '(lambda () (setq css-indent-offset 2)))
@@ -127,6 +169,7 @@
 ;;(add-hook 'scss-mode-hook '(lambda () (setq scss-compile-at-save nil)))
 
 ;; js-mode
+;;(add-to-list 'auto-mode-alist '("\\.js\\.erb$" . js-mode))
 ;;(add-hook 'js-mode-hook '(lambda () (setq js-indent-level 2)))
 
 ;; coffee-mode

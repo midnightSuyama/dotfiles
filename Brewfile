@@ -31,6 +31,7 @@ install mitmproxy
 install mogenerator
 install mongodb
 install monit
+install mono
 install mysql
 install nginx
 install nmap
