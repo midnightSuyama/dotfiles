@@ -26,6 +26,7 @@ install kyoto-tycoon
 install lua
 install markdown
 install mecab
+install mediainfo
 install memcached
 install mitmproxy
 install mogenerator
@@ -80,6 +81,7 @@ cask install calibre
 cask install dropbox
 cask install eclipse-ide
 cask install emacs
+cask install fabric
 cask install firefox
 cask install flash-player
 cask install fritzing
@@ -102,7 +104,6 @@ cask install qlstephen
 cask install quicksilver
 cask install sequel-pro
 cask install sourcetree
-cask install testflight
 cask install texturepacker
 cask install tiled
 cask install titanium-studio
