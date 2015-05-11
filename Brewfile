@@ -48,6 +48,7 @@ install readline
 install reattach-to-user-namespace
 install redis
 install rename
+install rtmpdump
 install sqlite
 install tig
 install tmux
