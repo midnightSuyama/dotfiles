@@ -111,7 +111,7 @@
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
 
 ;; c++-mode
-(add-to-list 'auto-mode-alist '("\\.ino$" . c++-mode))
+;;(add-to-list 'auto-mode-alist '("\\.ino$" . c++-mode))
 
 ;; csharp-mode
 ;;(require 'csharp-mode)
@@ -125,11 +125,6 @@
 
 ;; php-mode
 ;;(require 'php-mode)
-
-;; emmet-mode
-;;(require 'emmet-mode)
-;;(add-hook 'sgml-mode-hook 'emmet-mode)
-;;(add-hook 'css-mode-hook 'emmet-mode)
 
 ;; rvm
 ;;(require 'rvm)
@@ -159,6 +154,18 @@
 ;; rhtml-mode
 ;;(require 'rhtml-mode)
 ;;(add-hook 'rhtml-mode-hook 'rinari-launch)
+
+;; emmet-mode
+;;(require 'emmet-mode)
+;;(add-hook 'sgml-mode-hook 'emmet-mode)
+;;(add-hook 'web-mode-hook 'emmet-mode)
+;;(add-hook 'css-mode-hook 'emmet-mode)
+
+;; web-mode
+;;(require 'web-mode)
+;;(add-to-list 'auto-mode-alist '("\\.html?$" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
+;;(add-hook 'web-mode-hook '(lambda () (setq-default indent-tabs-mode nil) (setq web-mode-markup-indent-offset 2) (setq web-mode-css-indent-offset 2) (setq web-mode-code-indent-offset 2) (setq web-mode-style-padding 2) (setq web-mode-script-padding 2)))
 
 ;; css-mode
 ;;(add-hook 'css-mode-hook '(lambda () (setq css-indent-offset 2)))
