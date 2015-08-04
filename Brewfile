@@ -4,6 +4,7 @@ install autoconf
 install automake
 install awscli
 install boost
+install cabocha
 install cmake
 install cloog
 install curl
@@ -26,6 +27,7 @@ install kyoto-tycoon
 install lua
 install markdown
 install mecab
+install mecab-ipadic
 install mediainfo
 install memcached
 install mitmproxy
