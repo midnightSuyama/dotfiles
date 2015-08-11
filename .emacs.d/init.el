@@ -87,7 +87,7 @@
 ;;(popwin-mode t)
 
 ;; flycheck
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; magit
 ;;(require 'magit)
