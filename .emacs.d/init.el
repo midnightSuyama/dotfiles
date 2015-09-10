@@ -42,6 +42,10 @@
        (tool-bar-mode -1)
 ))
 
+;; Recent files
+(require 'recentf)
+(recentf-mode t)
+
 ;; load-path
 ;;(add-to-list 'load-path "~/.emacs.d/elisp")
 
