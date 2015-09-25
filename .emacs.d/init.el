@@ -127,6 +127,9 @@
 ;;(define-key omnisharp-mode-map (kbd "<C-tab>") 'omnisharp-auto-complete)
 ;;(define-key omnisharp-mode-map "." 'omnisharp-add-dot-and-auto-complete)
 
+;; shader-mode
+;;(require 'shader-mode)
+
 ;; php-mode
 ;;(require 'php-mode)
 
