@@ -106,10 +106,10 @@ cask install mplayerx
 cask install qlstephen
 cask install quicksilver
 cask install sequel-pro
+cask install skitch
 cask install sourcetree
 cask install texturepacker
 cask install tiled
-cask install titanium-studio
 cask install unity-web-player
 cask install unity3d
 cask install vagrant
