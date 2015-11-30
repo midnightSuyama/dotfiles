@@ -7,6 +7,7 @@ install boost
 install cabocha
 install cmake
 install cloog
+install ctags
 install curl
 install docker
 install doxygen

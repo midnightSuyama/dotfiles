@@ -82,6 +82,7 @@
 ;;(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
 ;;(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
 ;;(define-key global-map (kbd "C-c i")   'helm-imenu)
+;;(define-key global-map (kbd "M-.")     'helm-etags-select)
 ;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 ;;(define-key helm-read-file-map  (kbd "TAB") 'helm-execute-persistent-action)
 ;;(setq helm-delete-minibuffer-contents-from-point t)
@@ -141,22 +142,21 @@
 ;;(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 ;;(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
+;;(setq inf-ruby-default-implementation "pry")
+;;(add-hook 'ruby-mode-hook 'turn-on-ctags-auto-update-mode)
+
+;; ruby-electric
+;;(require 'ruby-electric)
+;;(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
 
 ;; robe
+;;(setq robe-mode-map nil)
 ;;(add-hook 'ruby-mode-hook 'robe-mode)
 ;;(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; rinari
 ;;(require 'rinari)
 ;;(add-hook 'ruby-mode-hook 'rinari-launch)
-
-;; ruby-electric
-;;(require 'ruby-electric)
-;;(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
-
-;; ruby-block
-;;(require 'ruby-block)
-;;(add-hook 'ruby-mode-hook '(lambda () (ruby-block-mode t) (setq ruby-block-highlight-toggle t)))
 
 ;; rhtml-mode
 ;;(require 'rhtml-mode)
