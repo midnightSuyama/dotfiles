@@ -12,6 +12,7 @@ install curl
 install docker
 install doxygen
 install ffmpeg
+install gibo
 install gist
 install git
 install grep
@@ -58,6 +59,7 @@ install tmux
 install tree
 install webalizer
 install wget
+install wine
 install wireshark
 install zsh
 
