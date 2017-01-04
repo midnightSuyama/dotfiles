@@ -44,10 +44,8 @@
 
 ;; Recent files
 (require 'recentf)
+(setq recentf-max-saved-items 10000)
 (recentf-mode t)
-
-;; load-path
-;;(add-to-list 'load-path "~/.emacs.d/elisp")
 
 ;; package
 ;;(require 'package)
@@ -92,39 +90,36 @@
 ;;(popwin-mode t)
 
 ;; flycheck
-;;(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(global-flycheck-mode)
 
 ;; magit
 ;;(require 'magit)
-;;(setq magit-last-seen-setup-instructions "1.4.0")
-
-;; sr-speedbar
-;;(require 'sr-speedbar)
-;;(setq speedbar-show-unknown-files t)
-;;(setq sr-speedbar-right-side nil)
-;;(sr-speedbar-refresh-turn-off)
-
-;; dash-at-point
-;;(global-set-key (kbd "C-c d") 'dash-at-point)
-;;(global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
+;;(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; anzu
 ;;(require 'anzu)
 ;;(global-anzu-mode t)
 
+;; neotree
+;;(require 'neotree)
+;;(global-set-key (kbd "C-c t") 'neotree-toggle)
+
+;; dash-at-point
+;;(global-set-key (kbd "C-c d") 'dash-at-point)
+;;(global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
+
+;; osx-dictionary
+;;(global-set-key (kbd "C-c d") 'osx-dictionary-search-pointer)
+
 ;; c-mode
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
 
-;; c++-mode
-;;(add-to-list 'auto-mode-alist '("\\.ino$" . c++-mode))
-
 ;; csharp-mode
-;;(require 'csharp-mode)
 ;;(add-hook 'csharp-mode-hook '(lambda () (omnisharp-mode) (flycheck-mode)))
 
 ;; omnisharp
 ;;(require 'omnisharp)
-;;(setq omnisharp-server-executable-path "/opt/OmniSharpServer/OmniSharp/bin/Debug/OmniSharp.exe")
+;;(setq omnisharp-server-executable-path "~/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe")
 ;;(define-key omnisharp-mode-map (kbd "<C-tab>") 'omnisharp-auto-complete)
 ;;(define-key omnisharp-mode-map "." 'omnisharp-add-dot-and-auto-complete)
 
@@ -143,7 +138,7 @@
 ;;(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
 ;;(add-to-list 'interpreter-mode-alist '("ruby" . ruby-mode))
 ;;(setq inf-ruby-default-implementation "pry")
-;;(add-hook 'ruby-mode-hook 'turn-on-ctags-auto-update-mode)
+;;(setq ruby-insert-encoding-magic-comment nil)
 
 ;; ruby-electric
 ;;(require 'ruby-electric)
@@ -187,12 +182,6 @@
 ;;(add-to-list 'auto-mode-alist '("\\.js\\.erb$" . js-mode))
 ;;(add-hook 'js-mode-hook '(lambda () (setq js-indent-level 2)))
 
-;; coffee-mode
-;;(autoload 'coffee-mode "coffee-mode")
-;;(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-;;(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-;;(add-hook 'coffee-mode-hook '(lambda () (setq coffee-tab-width 2)))
-
 ;; yaml-mode
 ;;(autoload 'yaml-mode "yaml-mode")
 ;;(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
@@ -201,3 +190,17 @@
 ;;(autoload 'markdown-mode "markdown-mode")
 ;;(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+
+;; Marked 2
+;;(defun markdown-preview-file ()
+;;  "use Marked 2 to preview the current file"
+;;  (interactive)
+;;  (shell-command 
+;;   (format "open -a 'Marked 2.app' %s" 
+;;       (shell-quote-argument (buffer-file-name))))
+;;)
+;;(global-set-key (kbd "C-c m") 'markdown-preview-file)
+
+;; adoc-mode
+;;(autoload 'adoc-mode "adoc-mode")
+;;(add-to-list 'auto-mode-alist '("\\.adoc$" . adoc-mode))

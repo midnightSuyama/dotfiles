@@ -1,6 +1,3 @@
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Keybind
 bindkey -e
 
@@ -31,6 +28,17 @@ setopt magic_equal_subst
 
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+
+# VCS
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '[%b]'
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () {
+    psvar=()
+    vcs_info
+    [[ -n $vcs_info_msg_0_ ]] && psvar[1]="$vcs_info_msg_0_"
+}
+RPROMPT="%1(v|%F{green}%1v%f|)"
 
 # Change directory
 setopt auto_cd
@@ -79,4 +87,12 @@ function chpwd() { ls }
 #zle -N peco-cdr
 #bindkey '^@' peco-cdr
 
-function gi() { curl http://www.gitignore.io/api/$@ ;}
+# rvm
+#export PATH="$HOME/.rvm/bin:$PATH"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# pyenv
+#export PYENV_ROOT=$HOME/.pyenv
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"

@@ -1,119 +1,68 @@
-install ansible
-install apktool
-install autoconf
-install automake
-install awscli
-install boost
-install cabocha
-install cmake
-install cloog
-install ctags
-install curl
-install docker
-install doxygen
-install ffmpeg
-install gibo
-install gist
-install git
-install grep
-install groonga
-install hadoop
-install hive
-install hping
-install imagemagick
-install jenkins
-install jq
-install jsonpp
-install kestrel
-install kyoto-tycoon
-install lua
-install markdown
-install mecab
-install mecab-ipadic
-install mediainfo
-install memcached
-install mitmproxy
-install mogenerator
-install mongodb
-install monit
-install mono
-install mysql
-install nginx
-install nmap
-install node
-install nvm
-install opencv
-install openssl
-install phantomjs
-install pidcat
-install postgresql
-install qt
-install readline
-install reattach-to-user-namespace
-install redis
-install rename
-install rtmpdump
-install sqlite
-install tig
-install tmux
-install tree
-install webalizer
-install wget
-install wine
-install wireshark
-install zsh
-
+tap 'homebrew/bundle'
+tap 'homebrew/core'
 tap 'homebrew/science'
-tap 'totakke/openni'
-install nite
-install openni
-install sensor
-install sensor-kinect
-
-tap 'peco/peco'
-install peco
-
 tap 'caskroom/cask'
-install brew-cask
 
-cask install 0xed
-cask install adobe-reader
-cask install android-studio
-cask install appcleaner
-cask install arduino
-cask install atom
-cask install audacity
-cask install calibre
-cask install dropbox
-cask install eclipse-ide
-cask install emacs
-cask install fabric
-cask install firefox
-cask install flash-player
-cask install fritzing
-cask install ganttproject
-cask install gitbook
-cask install github
-cask install google-chrome
-cask install grandperspective
-cask install handbrake
-cask install imagealpha
-cask install imageoptim
-cask install injection
-cask install java
-cask install jd-gui
-cask install leap-motion
-cask install menumeters
-cask install mou
-cask install mplayerx
-cask install qlstephen
-cask install quicksilver
-cask install sequel-pro
-cask install skitch
-cask install sourcetree
-cask install texturepacker
-cask install tiled
-cask install unity-web-player
-cask install unity3d
-cask install vagrant
-cask install virtualbox
+brew 'ansible'
+brew 'apktool'
+brew 'cabocha'
+brew 'ctags'
+brew 'emacs'
+brew 'ffmpeg'
+brew 'fswatch'
+brew 'gibo'
+brew 'git'
+brew 'heroku'
+brew 'imagemagick'
+brew 'jq'
+brew 'mecab'
+brew 'mecab-ipadic'
+brew 'memcached'
+brew 'mitmproxy'
+brew 'mongodb'
+brew 'monit'
+brew 'mono'
+brew 'mysql'
+brew 'nginx'
+brew 'nmap'
+brew 'node'
+brew 'opencv3'
+brew 'openssl'
+brew 'peco'
+brew 'phantomjs'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+brew 'reattach-to-user-namespace'
+brew 'redis'
+brew 'rename'
+brew 'sqlite'
+brew 'tig'
+brew 'tmux'
+brew 'tree'
+brew 'wget'
+brew 'zsh'
+
+cask '0xed'
+cask 'adobe-air'
+cask 'alfred'
+cask 'android-studio'
+cask 'appcleaner'
+cask 'dash'
+cask 'dropbox'
+cask 'fluid'
+cask 'google-chrome'
+cask 'grandperspective'
+cask 'imagealpha'
+cask 'imageoptim'
+cask 'iterm2'
+cask 'java'
+cask 'mplayerx'
+cask 'qlstephen'
+cask 'sketch'
+cask 'unity'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'yujitach-menumeters'
+
+cask 'xquartz'
+brew 'wine'
