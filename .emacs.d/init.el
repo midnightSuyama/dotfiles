@@ -47,6 +47,10 @@
 (setq recentf-max-saved-items 10000)
 (recentf-mode t)
 
+;; Ediff
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
+(setq ediff-split-window-function 'split-window-horizontally)
+
 ;; package
 ;;(require 'package)
 ;;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)

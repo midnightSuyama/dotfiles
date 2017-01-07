@@ -15,6 +15,7 @@ brew 'git'
 brew 'heroku'
 brew 'imagemagick'
 brew 'jq'
+brew 'maven'
 brew 'mecab'
 brew 'mecab-ipadic'
 brew 'memcached'
@@ -67,3 +68,19 @@ cask 'yujitach-menumeters'
 
 cask 'xquartz'
 brew 'wine'
+
+mas '1Password', id: 443987910
+mas 'Airmail 3', id: 918858936
+mas 'BetterSnapTool', id: 417375580
+mas 'Deckset', id: 847496013
+mas 'Desktop Calendar Plus', id: 524688159
+mas 'JPEGmini', id: 498944723
+mas 'Pixelmator', id: 407963104
+mas 'Pocket', id: 568494494
+mas 'PopClip', id: 445189367
+mas 'Reeder', id: 880001334
+mas 'SoraAnnai', id: 599799247
+mas 'Transmit', id: 403388562
+mas 'Tweetbot', id: 557168941
+mas 'Wunderlist', id: 410628904
+mas 'Xcode', id: 497799835
