@@ -87,9 +87,8 @@ function chpwd() { ls }
 #zle -N peco-cdr
 #bindkey '^@' peco-cdr
 
-# rvm
+# RVM
 #export PATH="$HOME/.rvm/bin:$PATH"
-#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # pyenv
 #export PYENV_ROOT=$HOME/.pyenv
