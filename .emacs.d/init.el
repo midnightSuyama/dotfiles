@@ -65,18 +65,15 @@
 ;;    (exec-path-from-shell-initialize))
 
 ;; yasnippet
-;;(require 'yasnippet)
 ;;(yas-global-mode t)
 
 ;; auto-complete
-;;(require 'auto-complete-config)
 ;;(ac-config-default)
 ;;(setq ac-use-menu-map t)
 ;;(define-key ac-menu-map (kbd "C-n") 'ac-next)
 ;;(define-key ac-menu-map (kbd "C-p") 'ac-previous)
 
 ;; helm
-;;(require 'helm-config)
 ;;(helm-mode t)
 ;;(define-key global-map (kbd "M-x")     'helm-M-x)
 ;;(define-key global-map (kbd "C-x C-f") 'helm-find-files)
@@ -97,15 +94,14 @@
 ;;(global-flycheck-mode)
 
 ;; magit
-;;(require 'magit)
 ;;(global-set-key (kbd "C-c g") 'magit-status)
 
 ;; anzu
-;;(require 'anzu)
 ;;(global-anzu-mode t)
 
 ;; neotree
-;;(require 'neotree)
+;;(setq neo-keymap-style 'concise)
+;;(setq neo-smart-open t)
 ;;(global-set-key (kbd "C-c t") 'neotree-toggle)
 
 ;; dash-at-point
@@ -130,11 +126,7 @@
 ;; shader-mode
 ;;(require 'shader-mode)
 
-;; php-mode
-;;(require 'php-mode)
-
 ;; rvm
-;;(require 'rvm)
 ;;(rvm-use-default)
 
 ;; ruby-mode
@@ -145,7 +137,6 @@
 ;;(setq ruby-insert-encoding-magic-comment nil)
 
 ;; ruby-electric
-;;(require 'ruby-electric)
 ;;(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
 
 ;; robe
@@ -154,21 +145,14 @@
 ;;(add-hook 'robe-mode-hook 'ac-robe-setup)
 
 ;; rinari
-;;(require 'rinari)
 ;;(add-hook 'ruby-mode-hook 'rinari-launch)
 
-;; rhtml-mode
-;;(require 'rhtml-mode)
-;;(add-hook 'rhtml-mode-hook 'rinari-launch)
-
 ;; emmet-mode
-;;(require 'emmet-mode)
 ;;(add-hook 'sgml-mode-hook 'emmet-mode)
 ;;(add-hook 'web-mode-hook 'emmet-mode)
 ;;(add-hook 'css-mode-hook 'emmet-mode)
 
 ;; web-mode
-;;(require 'web-mode)
 ;;(add-to-list 'auto-mode-alist '("\\.html?$" . web-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.erb$" . web-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.tag$" . web-mode))
@@ -178,7 +162,6 @@
 ;;(add-hook 'css-mode-hook '(lambda () (setq css-indent-offset 2)))
 
 ;; scss-mode
-;;(autoload 'scss-mode "scss-mode")
 ;;(add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
 ;;(add-hook 'scss-mode-hook '(lambda () (setq scss-compile-at-save nil)))
 
@@ -187,7 +170,6 @@
 ;;(add-hook 'js-mode-hook '(lambda () (setq js-indent-level 2)))
 
 ;; yaml-mode
-;;(autoload 'yaml-mode "yaml-mode")
 ;;(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 
 ;; markdown-mode
@@ -206,5 +188,4 @@
 ;;(global-set-key (kbd "C-c m") 'markdown-preview-file)
 
 ;; adoc-mode
-;;(autoload 'adoc-mode "adoc-mode")
 ;;(add-to-list 'auto-mode-alist '("\\.adoc$" . adoc-mode))

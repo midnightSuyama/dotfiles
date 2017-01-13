@@ -24,7 +24,6 @@
 (depends-on "ruby-electric")
 (depends-on "robe")
 (depends-on "rinari")
-(depends-on "rhtml-mode")
 (depends-on "emmet-mode")
 (depends-on "web-mode")
 (depends-on "scss-mode")
