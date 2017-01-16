@@ -45,6 +45,7 @@
 ;; Recent files
 (require 'recentf)
 (setq recentf-max-saved-items 10000)
+(setq recentf-auto-cleanup 'never)
 (recentf-mode t)
 
 ;; Ediff
