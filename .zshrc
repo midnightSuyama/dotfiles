@@ -95,3 +95,14 @@ function chpwd() { ls }
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
+
+# Emacs Tramp
+#if [[ "$TERM" == "dumb" ]]
+#then
+#    unsetopt zle
+#    unsetopt prompt_cr
+#    unsetopt prompt_subst
+#    unfunction precmd
+#    unfunction preexec
+#    PS1='$ '
+#fi
