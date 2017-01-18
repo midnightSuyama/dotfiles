@@ -112,6 +112,11 @@
 ;;(define-key region-bindings-mode-map "p" 'mc/mark-previous-like-this)
 ;;(define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
 
+;; highlight-symbol
+;;(global-set-key (kbd "M-s h") 'highlight-symbol)
+;;(global-set-key (kbd "M-s n") 'highlight-symbol-next)
+;;(global-set-key (kbd "M-s p") 'highlight-symbol-prev)
+
 ;; anzu
 ;;(global-anzu-mode t)
 

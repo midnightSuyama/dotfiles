@@ -13,6 +13,7 @@
 (depends-on "expand-region")
 (depends-on "multiple-cursors")
 (depends-on "region-bindings-mode")
+(depends-on "highlight-symbol")
 (depends-on "anzu")
 (depends-on "neotree")
 (depends-on "ctags-update")
