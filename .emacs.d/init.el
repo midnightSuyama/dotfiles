@@ -97,6 +97,21 @@
 ;; magit
 ;;(global-set-key (kbd "C-c g") 'magit-status)
 
+;; expand-region
+;;(global-set-key (kbd "C-@") 'er/expand-region)
+;;(global-set-key (kbd "C-M-@") 'er/contract-region)
+
+;; multiple-cursors
+;;(global-set-key (kbd "C-M-c") 'mc/edit-lines)
+
+;; region-bindings-mode
+;;(require 'region-bindings-mode)
+;;(region-bindings-mode-enable)
+;;(define-key region-bindings-mode-map "a" 'mc/mark-all-like-this)
+;;(define-key region-bindings-mode-map "n" 'mc/mark-next-like-this)
+;;(define-key region-bindings-mode-map "p" 'mc/mark-previous-like-this)
+;;(define-key region-bindings-mode-map "m" 'mc/mark-more-like-this-extended)
+
 ;; anzu
 ;;(global-anzu-mode t)
 
@@ -110,7 +125,7 @@
 ;;(global-set-key (kbd "C-c e") 'dash-at-point-with-docset)
 
 ;; osx-dictionary
-;;(global-set-key (kbd "C-c d") 'osx-dictionary-search-pointer)
+;;(global-set-key (kbd "C-c C-d") 'osx-dictionary-search-pointer)
 
 ;; c-mode
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4)))
