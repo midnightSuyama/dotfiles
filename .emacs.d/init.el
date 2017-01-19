@@ -23,6 +23,9 @@
 ;; Tab
 (setq-default tab-width 4 indent-tabs-mode nil)
 
+;; Space
+(setq-default show-trailing-whitespace t)
+
 ;; Bell
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
@@ -96,6 +99,7 @@
 
 ;; magit
 ;;(global-set-key (kbd "C-c g") 'magit-status)
+;;(setq magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
 
 ;; expand-region
 ;;(global-set-key (kbd "C-@") 'er/expand-region)
@@ -202,8 +206,8 @@
 ;;(defun markdown-preview-file ()
 ;;  "use Marked 2 to preview the current file"
 ;;  (interactive)
-;;  (shell-command 
-;;   (format "open -a 'Marked 2.app' %s" 
+;;  (shell-command
+;;   (format "open -a 'Marked 2.app' %s"
 ;;       (shell-quote-argument (buffer-file-name))))
 ;;)
 ;;(global-set-key (kbd "C-c m") 'markdown-preview-file)
