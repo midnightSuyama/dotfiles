@@ -151,9 +151,6 @@
 ;; shader-mode
 ;;(require 'shader-mode)
 
-;; rvm
-;;(rvm-use-default)
-
 ;; ruby-mode
 ;;(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
 ;;(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))

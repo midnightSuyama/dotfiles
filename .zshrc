@@ -87,14 +87,21 @@ function chpwd() { ls }
 #zle -N peco-cdr
 #bindkey '^@' peco-cdr
 
-# RVM
-#export PATH="$HOME/.rvm/bin:$PATH"
+# rvenv
+#export RBENV_ROOT=$HOME/.rbenv
+#export PATH="$RBENV_ROOT/bin:$PATH"
+#eval "$(rbenv init -)"
 
 # pyenv
 #export PYENV_ROOT=$HOME/.pyenv
 #export PATH="$PYENV_ROOT/bin:$PATH"
 #eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
+
+# nodenv
+#export NODENV_ROOT=$HOME/.nodenv
+#export PATH="$NODENV_ROOT/bin:$PATH"
+#eval "$(nodenv init -)"
 
 # Emacs Tramp
 #if [[ "$TERM" == "dumb" ]]
