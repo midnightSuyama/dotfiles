@@ -87,7 +87,7 @@ function chpwd() { ls }
 #zle -N peco-cdr
 #bindkey '^@' peco-cdr
 
-# rvenv
+# rbenv
 #export RBENV_ROOT=$HOME/.rbenv
 #export PATH="$RBENV_ROOT/bin:$PATH"
 #eval "$(rbenv init -)"
