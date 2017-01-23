@@ -47,6 +47,7 @@ setopt hist_ignore_all_dups
 
 autoload -U chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
+zstyle ':chpwd:*' recent-dirs-max 100
 
 # Beep
 setopt nobeep

@@ -27,7 +27,7 @@ brew 'mysql'
 brew 'nginx'
 brew 'nmap'
 brew 'nodenv'
-brew 'opencv3'
+brew 'homebrew/science/opencv3', args: ['with-python3']
 brew 'openssl'
 brew 'peco'
 brew 'phantomjs'
