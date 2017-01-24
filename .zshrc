@@ -2,7 +2,7 @@
 bindkey -e
 
 # Prompt
-autoload -U colors && colors
+autoload -Uz colors && colors
 PROMPT="%{${fg[yellow]}%}[%n@%m %1~]%(!.#.$) %{${reset_color}%}"
 PROMPT2="%{${fg[yellow]}%}%_> %{${reset_color}%}"
 
@@ -21,7 +21,7 @@ bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
 # Completion
-autoload -U compinit && compinit
+autoload -Uz compinit && compinit
 setopt auto_menu
 setopt list_packed
 setopt magic_equal_subst
@@ -45,7 +45,7 @@ setopt auto_cd
 setopt auto_pushd
 setopt hist_ignore_all_dups
 
-autoload -U chpwd_recent_dirs cdr add-zsh-hook
+autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-max 100
 
@@ -91,18 +91,18 @@ function chpwd() { ls }
 # rbenv
 #export RBENV_ROOT=$HOME/.rbenv
 #export PATH="$RBENV_ROOT/bin:$PATH"
-#eval "$(rbenv init -)"
+#eval "$(rbenv init - --no-rehash)"
 
 # pyenv
 #export PYENV_ROOT=$HOME/.pyenv
 #export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
+#eval "$(pyenv init - --no-rehash)"
 #eval "$(pyenv virtualenv-init -)"
 
 # nodenv
 #export NODENV_ROOT=$HOME/.nodenv
 #export PATH="$NODENV_ROOT/bin:$PATH"
-#eval "$(nodenv init -)"
+#eval "$(nodenv init - --no-rehash)"
 
 # Emacs Tramp
 #if [[ "$TERM" == "dumb" ]]
