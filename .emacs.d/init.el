@@ -89,7 +89,7 @@
 ;;(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
 ;;(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
 ;;(define-key global-map (kbd "C-c i")   'helm-imenu)
-;;(define-key global-map (kbd "M-.")     'helm-etags-select)
+;;(define-key global-map (kbd "M-t")     'helm-etags-select)
 ;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 ;;(define-key helm-read-file-map  (kbd "TAB") 'helm-execute-persistent-action)
 ;;(setq helm-delete-minibuffer-contents-from-point t)
@@ -169,6 +169,12 @@
 ;; rainbow-delimiters
 ;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
+;; whitespace
+;;(setq whitespace-style '(face trailing tabs spaces space-mark tab-mark))
+;;(setq whitespace-display-mappings '((space-mark ?\u3000 [?\u2423]) (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
+;;(setq whitespace-space-regexp "\\(\u3000+\\)")
+;;(global-whitespace-mode t)
+
 ;; neotree
 ;;(setq neo-keymap-style 'concise)
 ;;(setq neo-smart-open t)
@@ -189,13 +195,12 @@
 ;;(add-hook 'objc-mode-hook 'irony-mode)
 
 ;; csharp-mode
-;;(add-hook 'csharp-mode-hook '(lambda () (omnisharp-mode) (flycheck-mode)))
+;;(add-hook 'csharp-mode-hook '(lambda () (omnisharp-mode) (auto-complete-mode)))
 
 ;; omnisharp
 ;;(require 'omnisharp)
 ;;(setq omnisharp-server-executable-path "~/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe")
 ;;(define-key omnisharp-mode-map (kbd "<C-tab>") 'omnisharp-auto-complete)
-;;(define-key omnisharp-mode-map "." 'omnisharp-add-dot-and-auto-complete)
 
 ;; shader-mode
 ;;(require 'shader-mode)
