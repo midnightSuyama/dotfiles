@@ -89,7 +89,7 @@
 ;;(define-key global-map (kbd "C-x C-b") 'helm-buffers-list)
 ;;(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
 ;;(define-key global-map (kbd "C-c i")   'helm-imenu)
-;;(define-key global-map (kbd "M-t")     'helm-etags-select)
+;;(define-key global-map (kbd "M-.")     'helm-etags-select)
 ;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 ;;(define-key helm-read-file-map  (kbd "TAB") 'helm-execute-persistent-action)
 ;;(setq helm-delete-minibuffer-contents-from-point t)
@@ -153,9 +153,6 @@
 ;; highlight-symbol
 ;;(global-set-key (kbd "C-c h") 'highlight-symbol)
 
-;; highlight-indentation
-;;(add-hook 'prog-mode-hook '(lambda () (highlight-indentation-mode t)))
-
 ;; anzu
 ;;(global-anzu-mode t)
 
@@ -166,14 +163,20 @@
 ;; smartparens
 ;;(smartparens-global-mode t)
 
-;; rainbow-delimiters
-;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
-
 ;; whitespace
+;;(require 'whitespace)
 ;;(setq whitespace-style '(face trailing tabs spaces space-mark tab-mark))
 ;;(setq whitespace-display-mappings '((space-mark ?\u3000 [?\u2423]) (tab-mark ?\t [?\u00BB ?\t] [?\\ ?\t])))
 ;;(setq whitespace-space-regexp "\\(\u3000+\\)")
+;;(setq whitespace-trailing-regexp "\\([ \u00A0]+\\)$")
+;;(set-face-attribute 'whitespace-trailing nil :foreground "#CCC" :background nil :underline t)
 ;;(global-whitespace-mode t)
+
+;; highlight-indentation
+;;(add-hook 'prog-mode-hook 'highlight-indentation-mode)
+
+;; rainbow-delimiters
+;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
 
 ;; neotree
 ;;(setq neo-keymap-style 'concise)
@@ -185,6 +188,9 @@
 ;;(setq minimap-minimum-width 20)
 ;;(setq minimap-automatically-delete-window nil)
 ;;(global-set-key (kbd "C-c m") 'minimap-mode)
+
+;; ctags-update
+;;(add-hook 'prog-mode-hook 'turn-on-ctags-auto-update-mode)
 
 ;; c-mode
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4) (setq highlight-indentation-offset 4)))
@@ -201,6 +207,7 @@
 ;;(require 'omnisharp)
 ;;(setq omnisharp-server-executable-path "~/omnisharp-server/OmniSharp/bin/Debug/OmniSharp.exe")
 ;;(define-key omnisharp-mode-map (kbd "<C-tab>") 'omnisharp-auto-complete)
+;;(define-key omnisharp-mode-map "." 'omnisharp-add-dot-and-auto-complete)
 
 ;; shader-mode
 ;;(require 'shader-mode)
