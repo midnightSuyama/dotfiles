@@ -81,6 +81,9 @@
 ;;(set-face-attribute 'mode-line-inactive nil :foreground "#FFF" :background "#9E9E9E" :box nil)
 ;;(powerline-default-theme)
 
+;; nyan-mode
+;;(nyan-mode t)
+
 ;; helm
 ;;(helm-mode t)
 ;;(define-key global-map (kbd "M-x")     'helm-M-x)
@@ -93,6 +96,7 @@
 ;;(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
 ;;(define-key helm-read-file-map  (kbd "TAB") 'helm-execute-persistent-action)
 ;;(setq helm-delete-minibuffer-contents-from-point t)
+;;(with-eval-after-load 'helm (diminish 'helm-mode))
 
 ;; helm-swoop
 ;;(require 'helm-swoop)
@@ -111,6 +115,8 @@
 ;;(projectile-mode t)
 ;;(projectile-rails-global-mode)
 ;;(helm-projectile-on)
+;;(with-eval-after-load 'projectile (diminish 'projectile-mode))
+;;(with-eval-after-load 'projectile-rails (diminish 'projectile-rails-mode))
 
 ;; popwin
 ;;(require 'popwin)
@@ -118,15 +124,18 @@
 
 ;; yasnippet
 ;;(yas-global-mode t)
+;;(with-eval-after-load 'yasnippet (diminish 'yas-minor-mode))
 
 ;; auto-complete
 ;;(ac-config-default)
 ;;(setq ac-use-menu-map t)
 ;;(define-key ac-menu-map (kbd "C-n") 'ac-next)
 ;;(define-key ac-menu-map (kbd "C-p") 'ac-previous)
+;;(with-eval-after-load 'auto-complete (diminish 'auto-complete-mode))
 
 ;; flycheck
 ;;(global-flycheck-mode)
+;;(with-eval-after-load 'flycheck (diminish 'flycheck-mode))
 
 ;; magit
 ;;(global-set-key (kbd "C-c g") 'magit-status)
@@ -134,6 +143,7 @@
 
 ;; git-gutter
 ;;(global-git-gutter-mode t)
+;;(with-eval-after-load 'git-gutter (diminish 'git-gutter-mode))
 
 ;; expand-region
 ;;(global-set-key (kbd "C-@") 'er/expand-region)
@@ -155,6 +165,7 @@
 
 ;; anzu
 ;;(global-anzu-mode t)
+;;(with-eval-after-load 'anzu (diminish 'anzu-mode))
 
 ;; avy
 ;;(global-set-key (kbd "C-:") 'avy-goto-char-timer)
@@ -162,6 +173,7 @@
 
 ;; smartparens
 ;;(smartparens-global-mode t)
+;;(with-eval-after-load 'smartparens (diminish 'smartparens-mode))
 
 ;; whitespace
 ;;(require 'whitespace)
@@ -171,9 +183,11 @@
 ;;(setq whitespace-trailing-regexp "\\([ \u00A0]+\\)$")
 ;;(set-face-attribute 'whitespace-trailing nil :foreground "#CCC" :background nil :underline t)
 ;;(global-whitespace-mode t)
+;;(with-eval-after-load 'whitespace (diminish 'global-whitespace-mode))
 
 ;; highlight-indentation
 ;;(add-hook 'prog-mode-hook 'highlight-indentation-mode)
+;;(with-eval-after-load 'highlight-indentation (diminish 'highlight-indentation-mode))
 
 ;; rainbow-delimiters
 ;;(add-hook 'prog-mode-hook 'rainbow-delimiters-mode)
@@ -188,9 +202,11 @@
 ;;(setq minimap-minimum-width 20)
 ;;(setq minimap-automatically-delete-window nil)
 ;;(global-set-key (kbd "C-c m") 'minimap-mode)
+;;(with-eval-after-load 'minimap (diminish 'minimap-mode))
 
 ;; ctags-update
 ;;(add-hook 'prog-mode-hook 'turn-on-ctags-auto-update-mode)
+;;(with-eval-after-load 'ctags-update (diminish 'ctags-auto-update-mode))
 
 ;; c-mode
 ;;(add-hook 'c-mode-common-hook '(lambda () (setq c-basic-offset 4) (setq highlight-indentation-offset 4)))
@@ -211,6 +227,7 @@
 
 ;; shader-mode
 ;;(require 'shader-mode)
+;;(add-hook 'shader-mode-hook 'auto-complete-mode)
 
 ;; ruby-mode
 ;;(autoload 'ruby-mode "ruby-mode" "Major mode for ruby files" t)
@@ -221,6 +238,7 @@
 
 ;; ruby-electric
 ;;(add-hook 'ruby-mode-hook 'ruby-electric-mode)
+;;(with-eval-after-load 'ruby-electric (diminish 'ruby-electric-mode))
 
 ;; robe
 ;;(setq robe-mode-map nil)
@@ -248,6 +266,7 @@
 ;;(add-hook 'sgml-mode-hook 'emmet-mode)
 ;;(add-hook 'web-mode-hook 'emmet-mode)
 ;;(add-hook 'css-mode-hook 'emmet-mode)
+;;(with-eval-after-load 'emmet-mode (diminish 'emmet-mode))
 
 ;; js2-mode
 ;;(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
@@ -256,7 +275,7 @@
 
 ;; tern
 ;;(add-hook 'js2-mode-hook 'tern-mode)
-;;(eval-after-load 'tern '(progn (tern-ac-setup)))
+;;(with-eval-after-load 'tern (tern-ac-setup))
 
 ;; yaml-mode
 ;;(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))

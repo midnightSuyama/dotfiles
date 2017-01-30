@@ -4,6 +4,8 @@
 (depends-on "exec-path-from-shell")
 (depends-on "multi-term")
 (depends-on "powerline")
+(depends-on "nyan-mode")
+(depends-on "diminish")
 (depends-on "helm")
 (depends-on "helm-swoop")
 (depends-on "helm-ls-git")
