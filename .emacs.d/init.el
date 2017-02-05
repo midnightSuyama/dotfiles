@@ -73,6 +73,8 @@
 ;;             (yas-minor-mode -1)
 ;;             (define-key term-raw-map (kbd "C-n") '(lambda () (interactive) (term-send-raw-string "\C-n")))
 ;;             (define-key term-raw-map (kbd "C-p") '(lambda () (interactive) (term-send-raw-string "\C-p")))
+;;             (define-key term-raw-map (kbd "C-c t") 'term-line-mode)
+;;             (define-key term-mode-map (kbd "C-c t") 'term-char-mode)
 ;;))
 
 ;; powerline
