@@ -47,6 +47,7 @@
 (depends-on "js2-mode")
 (depends-on "tern")
 (depends-on "tern-auto-complete")
+(depends-on "json-mode")
 (depends-on "yaml-mode")
 (depends-on "markdown-mode")
 (depends-on "adoc-mode")
