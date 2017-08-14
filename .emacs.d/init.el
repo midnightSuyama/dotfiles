@@ -277,6 +277,7 @@
 
 ;; tern
 ;;(add-hook 'js2-mode-hook 'tern-mode)
+;;(setq tern-command '("tern" "--no-port-file"))
 ;;(with-eval-after-load 'tern (tern-ac-setup))
 
 ;; yaml-mode
